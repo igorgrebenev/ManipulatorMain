@@ -24,6 +24,9 @@ void setupROT3U6DOF (int min, int max) {
 
 void performAllImmediately(int newPositions[ROT3U6DOF_SERVO_COUNT]) {
   for (int i=0; i<ROT3U6DOF_SERVO_COUNT; i++) {
+    if (newPositions[i] == UNDEFINED) { // Менять значение не нужно
+      continue;
+    }
     SGServo currentServo = servos[i];
     currentServo.performImmediately(newPositions[i]);
     servoPositions[i] = newPositions[i];
