@@ -9,37 +9,23 @@ void setup() {
 }
 
 void loop() {
-  // хватаем хваталку
-  performServoImmediately(5,90);
-  delay(3000);
-  //
-  int positions01[] = {140, UNDEFINED, 22, 120, 180, 10};
+  int positions00[] = {29, 65, UNDEFINED, 150, 45, UNDEFINED};
+  performAllServos(positions00);
+
+  int positions01[] = {UNDEFINED, UNDEFINED, UNDEFINED, 135, UNDEFINED, UNDEFINED};
   performAllServos(positions01);
-  delay(3000);
-
-  // открываем хваталку
-  performServoImmediately(5,10);
-  delay(3000);
-
-  int positions02[] = {UNDEFINED, UNDEFINED, 40, 155, UNDEFINED, UNDEFINED};
-  performAllServos(positions02);
-  delay(3000);
-
-  // хватаем хваталку
-  performServoImmediately(5,90);
-  delay(3000);
-
-  int positions03[] = {UNDEFINED, UNDEFINED, 22, 120, UNDEFINED, UNDEFINED};
-  performAllServos(positions03);
-  delay(3000);
-
-  int positions04[] = {15, UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED};
-  performAllServos(positions04);
-  delay(3000);
-
-  // открываем хваталку
-  performServoImmediately(5,10);
-  delay(3000);
   
-  delay(900000); // стоп
+  int positions02[] = {UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, 70};
+  performAllServos(positions02); 
+
+  int positions03[] = {UNDEFINED, 90, 45, UNDEFINED, UNDEFINED, UNDEFINED};
+  performAllServos(positions03);  
+
+  int positions04[] = {139, 0, 97, 0, 0, UNDEFINED};
+  performAllServos(positions04);
+
+  int positions05[] = {UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, 20};
+  performAllServos(positions05);
+
+  delay(300000); 
 }
