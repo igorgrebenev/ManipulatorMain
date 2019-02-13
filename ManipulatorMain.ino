@@ -9,10 +9,10 @@ void setup() {
 }
 
 void loop() {
-  int positions00[] = {29, 65, UNDEFINED, 150, 45, UNDEFINED};
+  int positions00[] = {28, 65, 120, 150, 45, 20};
   performAllServos(positions00);
 
-  int positions01[] = {UNDEFINED, UNDEFINED, UNDEFINED, 135, UNDEFINED, UNDEFINED};
+  int positions01[] = {UNDEFINED, 62, UNDEFINED, 131, UNDEFINED, UNDEFINED};
   performAllServos(positions01);
   
   int positions02[] = {UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, 70};
@@ -21,11 +21,14 @@ void loop() {
   int positions03[] = {UNDEFINED, 90, 45, UNDEFINED, UNDEFINED, UNDEFINED};
   performAllServos(positions03);  
 
-  int positions04[] = {139, 0, 97, 0, 0, UNDEFINED};
+  int positions04[] = {140, 0, 97, 0, 0, UNDEFINED};
   performAllServos(positions04);
 
   int positions05[] = {UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, UNDEFINED, 20};
   performAllServos(positions05);
 
-  delay(300000); 
+  int positions06[] = {UNDEFINED, 90, 45, 45, UNDEFINED, UNDEFINED};
+  performAllServos(positions06);
+
+  delay(3000); 
 }
